@@ -22,6 +22,14 @@ for (i = 0; i < operators.length; i++) {
     }
   });
 }
+const clearButton = document.querySelector(".clear");
+clearButton.addEventListener("click", () => {
+  currentInput = "";
+  currentOperator = "";
+  result = 0;
+  display.textContent = "0";
+});
+
 const equalButton = document.querySelector(".equal");
 equalButton.addEventListener("click", () => {
   if (currentInput !== "") {
@@ -40,6 +48,7 @@ equalButton.addEventListener("click", () => {
         result /= secondOperand;
         break;
     }
+
     currentInput = "";
     currentOperator = "";
     display.textContent = result;
