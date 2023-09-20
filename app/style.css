@@ -4,7 +4,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f0f0f0;
+  background-color: #dfbb8c;
 }
 .calculator {
   border: 2px solid #ccc;
@@ -30,7 +30,6 @@ button {
   font-size: 20px;
   padding: 10px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 .operand {
@@ -39,6 +38,7 @@ button {
 }
 .operator,
 .equal {
+  width: 42px;
   background-color: #ff9900;
   color: white;
 }
@@ -49,4 +49,7 @@ button {
   width: 100px;
   color: white;
   background-color: #444;
+}
+.operator {
+  width: 40px;
 }

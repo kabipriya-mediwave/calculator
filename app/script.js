@@ -1,6 +1,7 @@
 const display = document.getElementById("display");
 let currentInput = "";
 let currentOperator = "";
+let operandone = "";
 let result = 0;
 
 const operands = document.querySelectorAll(".operand");
@@ -17,6 +18,7 @@ for (i = 0; i < operators.length; i++) {
   operator.addEventListener("click", () => {
     if (currentInput !== "") {
       currentOperator = operator.textContent;
+      operandone = parseFloat(currentInput);
       result = parseFloat(currentInput);
       currentInput = "";
     }
@@ -49,8 +51,9 @@ equalButton.addEventListener("click", () => {
         break;
     }
 
-    currentInput = "";
-    currentOperator = "";
-    display.textContent = result;
+    // currentInput = "";
+    // currentOperator = "";  
+    //display.textContent = result;
+    display.textContent = `${operandone}${currentOperator}${secondOperand}=${result}`;
   }
 });
